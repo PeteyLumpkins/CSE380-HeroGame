@@ -1,0 +1,151 @@
+{
+	"name": "Hero",
+    "student": "David Wei",
+	"spriteSheetImage": "Hero.png",
+	"spriteWidth": 128,
+	"spriteHeight": 128,
+	"leftBuffer": 0,
+	"rightBuffer": 0,
+	"topBuffer": 0,
+	"bottomBuffer": 0,
+	"columns": 4,
+	"rows": 8,
+	"animations": [
+		{
+			"name": "IDLE",
+			"repeat": true,
+			"frames": [
+				{
+					"index": 0,
+					"duration": 10
+				},
+				{
+					"index": 1,
+					"duration": 10
+				}
+			]
+		},
+		{
+			"name": "RUNNING_LEFT",
+			"repeat": true,
+			"frames": [
+				{
+					"index": 4,
+					"duration": 6
+				},
+				{
+					"index": 5,
+					"duration": 4
+				},
+				{
+					"index": 6,
+					"duration": 6
+				}
+			]
+		},
+		{
+			"name": "RUNNING_RIGHT",
+			"repeat": true,
+			"frames": [
+				{
+					"index": 8,
+					"duration": 6
+				},
+				{
+					"index": 9,
+					"duration": 4
+				},
+				{
+					"index": 10,
+					"duration": 6
+				}
+			]
+		},
+		{
+			"name": "ATTACKING_LEFT",
+			"repeat": true,
+			"frames": [
+				{
+					"index": 12,
+					"duration": 5
+				},
+				{
+					"index": 13,
+					"duration": 4
+				},
+				{
+					"index": 14,
+					"duration": 5
+				}
+			]
+		},
+		{
+			"name": "ATTACKING_RIGHT",
+			"repeat": true,
+			"frames": [
+				{
+					"index": 16,
+					"duration": 5
+				},
+				{
+					"index": 17,
+					"duration": 4
+				},
+				{
+					"index": 18,
+					"duration": 5
+				}
+			]
+		},
+		{
+			"name": "TAKING_DAMAGE",
+			"repeat": true,
+			"frames": [
+				{
+					"index": 20,
+					"duration": 5
+				},
+				{
+					"index": 21,
+					"duration": 5
+				},
+				{
+					"index": 22,
+					"duration": 5
+				}
+			]
+		},
+		{
+			"name": "DYING",
+			"repeat": true,
+			"frames": [
+				{
+					"index": 24,
+					"duration": 5
+				},
+				{
+					"index": 25,
+					"duration": 5
+				},
+				{
+					"index": 26,
+					"duration": 5
+				},
+				{
+					"index": 27,
+					"duration": 5
+				}
+			]
+		},
+		{
+			"name": "DEAD",
+			"repeat": true,
+			"frames": [
+				{
+					"index": 28,
+					"duration": 50
+				}
+			]
+		}
+	]
+}

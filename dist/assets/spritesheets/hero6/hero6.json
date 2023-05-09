@@ -1,0 +1,183 @@
+{
+	"name": "CAM_THE_COLA_CAN",
+    "student": "Henry Chen",
+	"spriteSheetImage": "CAM_THE_COLA_CAN.png",
+	"spriteWidth": 128,
+	"spriteHeight": 128,
+	"leftBuffer": 0,
+	"rightBuffer": 0,
+	"topBuffer": 0,
+	"bottomBuffer": 0,
+	"columns": 5,
+	"rows": 8,
+	"animations": [
+		{
+			"name": "RUNNING_LEFT",
+			"repeat": true,
+			"frames": [
+				{
+					"index": 0,
+					"duration": 10
+				},
+				{
+					"index": 1,
+					"duration": 10
+				},
+				{
+					"index": 2,
+					"duration": 10
+				},
+				{
+					"index": 3,
+					"duration": 10
+				}
+			]
+		},
+		{
+			"name": "RUNNING_RIGHT",
+			"repeat": true,
+			"frames": [
+				{
+					"index": 5,
+					"duration": 10
+				},
+				{
+					"index": 6,
+					"duration": 10
+				},
+				{
+					"index": 7,
+					"duration": 10
+				},
+				{
+					"index": 8,
+					"duration": 10
+				}
+			]
+		},
+		{
+			"name": "IDLE",
+			"repeat": true,
+			"frames": [
+				{
+					"index": 10,
+					"duration": 10
+				},
+				{
+					"index": 11,
+					"duration": 10
+				},
+				{
+					"index": 12,
+					"duration": 10
+				}
+			]
+		},
+		{
+			"name": "ATTACKING_LEFT",
+			"repeat": true,
+			"frames": [
+				{
+					"index": 15,
+					"duration": 10
+				},
+				{
+					"index": 16,
+					"duration": 10
+				},
+				{
+					"index": 17,
+					"duration": 10
+				},
+				{
+					"index": 18,
+					"duration": 10
+				},
+				{
+					"index": 19,
+					"duration": 10
+				}
+			]
+		},
+		{
+			"name": "ATTACKING_RIGHT",
+			"repeat": true,
+			"frames": [
+				{
+					"index": 20,
+					"duration": 10
+				},
+				{
+					"index": 21,
+					"duration": 10
+				},
+				{
+					"index": 22,
+					"duration": 10
+				},
+				{
+					"index": 23,
+					"duration": 10
+				},
+				{
+					"index": 24,
+					"duration": 10
+				}
+			]
+		},
+		{
+			"name": "TAKING_DAMAGE",
+			"repeat": true,
+			"frames": [
+				{
+					"index": 25,
+					"duration": 10
+				},
+				{
+					"index": 26,
+					"duration": 10
+				},
+				{
+					"index": 27,
+					"duration": 10
+				}
+			]
+		},
+		{
+			"name": "DYING",
+			"repeat": true,
+			"frames": [
+				{
+					"index": 30,
+					"duration": 10
+				},
+				{
+					"index": 31,
+					"duration": 10
+				},
+				{
+					"index": 32,
+					"duration": 10
+				},
+				{
+					"index": 33,
+					"duration": 10
+				},
+				{
+					"index": 34,
+					"duration": 10
+				}
+			]
+		},
+		{
+			"name": "DEAD",
+			"repeat": true,
+			"frames": [
+				{
+					"index": 35,
+					"duration": 10
+				}
+			]
+		}
+	]
+}
