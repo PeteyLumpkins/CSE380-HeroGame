@@ -93,10 +93,9 @@ export default abstract class HW3Level extends Scene {
         }});
         this.sprites = new Array<AnimatedSprite>();
         this.names = new Array<Label>();
-        this.heroKeys = new Array<string>();
-        for (let i = 0; i < 20; i++) this.heroKeys.push(("hero" + i));
 
-        this.timer = new Timer(1000*60, () => {
+
+        this.timer = new Timer(1000*30, () => {
             this.sceneManager.changeToScene(HW3Level1);
         });
         this.add = new HW3FactoryManager(this, this.tilemaps);
@@ -111,7 +110,7 @@ export default abstract class HW3Level extends Scene {
         this.initializeTilemap();
 
         // Initialize the player 
-        for (let key of this.heroKeys) this.initializePlayer(key);
+        for (let key of this.heroKeys) this.initializePlayer(key, parseInt(key.substring(4)));
 
         // Initialize the viewport - this must come after the player has been initialized
         this.initializeViewport();
@@ -128,10 +127,23 @@ export default abstract class HW3Level extends Scene {
     }
 
     public loadScene(): void {
+        this.heroKeys = new Array<string>();
+        let set = new Set<number>();
+        while (set.size < 10) {
+            let num = Math.floor(Math.random() * 35)
+            while (set.has(num) || num === 22) num = Math.floor(Math.random() * 35);
+            set.add(num);
+        }
+        for (let num of set) this.heroKeys.push(("hero" + num));
+        console.log(this.heroKeys);
         for (let i = 0; i < this.heroKeys.length; i++) {
-            this.load.spritesheet(this.heroKeys[i], `assets/spritesheets/hero${i}/hero${i}.json`);
+            this.load.spritesheet(this.heroKeys[i], `assets/spritesheets/${this.heroKeys[i]}/${this.heroKeys[i]}.json`);
         }
         this.load.object("names", "./assets/names.json");
+    }
+
+    public unloadScene(): void {
+
     }
 
     /* Update method for the scene */
@@ -234,7 +246,8 @@ export default abstract class HW3Level extends Scene {
      * Initializes the player, setting the player's initial position to the given position.
      * @param position the player's spawn position
      */
-    protected initializePlayer(key: string): void {
+    protected initializePlayer(key: string, index: number): void {
+        console.log(index);
         if (this.playerSpawn === undefined) {
             throw new Error("Player spawn must be set before initializing the player!");
         }
@@ -290,13 +303,13 @@ export default abstract class HW3Level extends Scene {
         });
 
         this.sprites.push(this.player);
-        this.initializeLabel();
+        this.initializeLabel(index);
     }
-    protected initializeLabel(): void {
+    protected initializeLabel(index: number): void {
         this.names.push(<Label>this.add.uiElement(UIElementType.LABEL, HW3Layers.UI, {position: Vec2.ZERO, text: ""}));
         let names = this.load.getObject("names");
         this.names[this.names.length - 1].fontSize = 16;
-        this.names[this.names.length - 1].text = names.students[this.names.length - 1];
+        this.names[this.names.length - 1].text = names.students[index];
         this.names[this.names.length - 1].position.copy(this.sprites[this.names.length - 1].position);
     }
     /**

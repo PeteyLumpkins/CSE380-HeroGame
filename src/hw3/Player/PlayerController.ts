@@ -92,8 +92,8 @@ export default class PlayerController extends StateMachineAI implements Unique, 
         this._moveDir = 0;
         this._moveDirCounter = 0;
 
-        this.health = 50;
-        this.maxHealth = 50;
+        this.health = 75;
+        this.maxHealth = 75;
 
         // this.health = 10
         // this.maxHealth = 10;
